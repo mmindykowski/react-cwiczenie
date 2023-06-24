@@ -8,9 +8,9 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Heading />
+        <Heading text='React counter' />
       </header>
-      <Counter counterInitValue={15} />
+      <Counter counterInitValue={20} />
       <Counter counterInitValue={108} />
     </div>
   );
