@@ -10,7 +10,8 @@ const App = () => {
       <header className="App-header">
         <Heading />
       </header>
-      <Counter />
+      <Counter counterInitValue={15} />
+      <Counter counterInitValue={108} />
     </div>
   );
 };
