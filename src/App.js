@@ -1,19 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-const Heading = () => {
-  return <h2>React counter App</h2>
-}
+import Heading from "./components/Heading";
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-  <Heading />
+        <Heading />
       </header>
-
     </div>
   );
-}
+};
 
 export default App;
