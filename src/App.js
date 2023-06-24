@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Heading from "./components/Heading";
+import Counter from "./Counter";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <header className="App-header">
         <Heading />
       </header>
+      <Counter />
     </div>
   );
 };
