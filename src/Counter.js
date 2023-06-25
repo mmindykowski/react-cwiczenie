@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Counter.css";
 import Display from "./components/Display";
+import ButtonsPanel from "./components/ButtonsPanel";
 
 const Counter = (props) => {
   const [counter, setCounter] = useState(props.counterInitValue);
@@ -12,9 +13,7 @@ const Counter = (props) => {
   return (
     <div className="counter">
       <Display counter={counter} />
-      <div className="buttonsPanel">
-        <button onClick={updateCounter}>Add</button>
-      </div>
+      <ButtonsPanel />
     </div>
   );
 };
