@@ -1,11 +1,14 @@
 import "./Counter.css";
 
 const Counter = (props) => {
+
   const counter = Math.floor(Math.random() * 10);
-  console.log(props.counterInitValue);
+
+  // console.log(props.counterInitValue);
+
   return (
     <div className="counter">
-      <p>Counter: {counter}</p>
+      <p>Counter: {props.counterInitValue}</p>
       <div className="buttonsPanel">
         <button>Add</button>
       </div>
