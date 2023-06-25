@@ -1,10 +1,9 @@
+import { useState } from "react";
 import "./Counter.css";
 
 const Counter = (props) => {
 
-  const counter = Math.floor(Math.random() * 10);
-
-  // console.log(props.counterInitValue);
+  const [counter, setCounter] =useState(17);
 
   return (
     <div className="counter">
