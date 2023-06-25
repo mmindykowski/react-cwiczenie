@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Counter.css";
 import Display from "./components/Display";
 import ButtonsPanel from "./components/ButtonsPanel";
+import Clock from "./components/Clock"
 
 const Counter = (props) => {
   const [counter, setCounter] = useState(props.counterInitValue);
@@ -20,6 +21,7 @@ const Counter = (props) => {
     <div className="counter">
       <Display counter={counter} />
       <ButtonsPanel updateCounter={updateCounter} />
+      <Clock />
     </div>
   );
 };
