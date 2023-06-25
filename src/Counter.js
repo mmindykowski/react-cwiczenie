@@ -11,7 +11,7 @@ const Counter = (props) => {
 
   return (
     <div className="counter">
-      <p>Counter: {counter}</p>
+      
       <div className="buttonsPanel">
         <button onClick={updateCounter}>Add</button>
       </div>
