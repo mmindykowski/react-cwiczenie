@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./Counter.css";
 
 const Counter = (props) => {
-  const [counter, setCounter] = useState(17);
+  const [counter, setCounter] = useState(props.counterInitValue);
 
   const updateCounter = () => {
-    console.log("test");
-    setCounter(30);
+    setCounter(counter + 1);
+    
   };
 
   return (
