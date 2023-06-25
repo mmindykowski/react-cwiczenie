@@ -6,14 +6,20 @@ import ButtonsPanel from "./components/ButtonsPanel";
 const Counter = (props) => {
   const [counter, setCounter] = useState(props.counterInitValue);
 
-  const updateCounter = () => {
-    setCounter(counter + 1);
+  const updateCounter = (action) => {
+    if (action === "add") {
+      setCounter(counter + 1);
+    } else if (action === "reset") {
+      setCounter(props.counterInitValue);
+    } else {
+      setCounter(0);
+    }
   };
 
   return (
     <div className="counter">
       <Display counter={counter} />
-      <ButtonsPanel />
+      <ButtonsPanel updateCounter={updateCounter} />
     </div>
   );
 };
