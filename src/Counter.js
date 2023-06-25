@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Counter.css";
 import Display from "./components/Display";
 import ButtonsPanel from "./components/ButtonsPanel";
@@ -16,6 +16,10 @@ const Counter = (props) => {
       setCounter(0);
     }
   };
+
+  useEffect(()=>{
+    console.log('Wywołanie use effecta');
+  }, [counter]);
 
   return (
     <div className="counter">
