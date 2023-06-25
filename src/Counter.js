@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./Counter.css";
 import Display from "./components/Display";
 import ButtonsPanel from "./components/ButtonsPanel";
-import Clock from "./components/Clock"
+import Clock from "./components/Clock";
 
 const Counter = (props) => {
   const [counter, setCounter] = useState(props.counterInitValue);
-
+  const [showClock, setShowClock] = useState(true);
   const updateCounter = (action) => {
     if (action === "add") {
       setCounter(counter + 1);
@@ -21,7 +21,7 @@ const Counter = (props) => {
     <div className="counter">
       <Display counter={counter} />
       <ButtonsPanel updateCounter={updateCounter} />
-      <Clock />
+      {showClock ? <Clock setShowClock={setShowClock}/> : <span onClick={()=>setShowClock(true)}>Pokaż zegar</span>}
     </div>
   );
 };
