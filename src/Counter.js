@@ -2,14 +2,18 @@ import { useState } from "react";
 import "./Counter.css";
 
 const Counter = (props) => {
+  const [counter, setCounter] = useState(17);
 
-  const [counter, setCounter] =useState(17);
+  const updateCounter = () => {
+    console.log("test");
+    setCounter(30);
+  };
 
   return (
     <div className="counter">
-      <p>Counter: {props.counterInitValue}</p>
+      <p>Counter: {counter}</p>
       <div className="buttonsPanel">
-        <button>Add</button>
+        <button onClick={updateCounter}>Add</button>
       </div>
     </div>
   );
