@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Heading text='React counter' />
+        <Heading text="React counter app" classValue="gray" />
       </header>
       <Counter counterInitValue={20} />
       <Counter counterInitValue={108} />
