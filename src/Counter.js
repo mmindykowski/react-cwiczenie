@@ -21,7 +21,7 @@ const Counter = (props) => {
     <div className="counter">
       <Display counter={counter} />
       <ButtonsPanel updateCounter={updateCounter} />
-      {showClock ? <Clock setShowClock={setShowClock}/> : <span onClick={()=>setShowClock(true)}>Pokaż zegar</span>}
+      {showClock ? <Clock setShowClock={setShowClock}/> : <p className="clockControll" onClick={()=>setShowClock(true)}>Pokaż zegar</p>}
     </div>
   );
 };

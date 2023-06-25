@@ -18,3 +18,10 @@
 .counter button:hover {
     background-color: rgb(56, 142, 179);
 }
+
+.clockControll {
+    text-decoration: underline;
+    cursor: pointer;
+    
+
+}
