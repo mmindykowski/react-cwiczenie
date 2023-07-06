@@ -4,14 +4,14 @@ const Clock = (props) => {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
-    console.log("Komponent zamontowany");
+    // console.log("Komponent zamontowany");
 
     const interval = setInterval(() => {
-      console.log("Wykonuję intwerwał");
+      // console.log("Wykonuję intwerwał");
       setTime(new Date().toLocaleTimeString());
     }, 1000);
     return () => {
-      console.log("Odmontowuję i czyszczę");
+      // console.log("Odmontowuję i czyszczę");
       clearInterval(interval);
     };
   }, []);
