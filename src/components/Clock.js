@@ -17,7 +17,7 @@ const Clock = (props) => {
   }, []);
 
   useEffect(()=> {
-    console.log('Komponent się aktualizuje');
+    // console.log('Komponent się aktualizuje');
   })
 
   return (

@@ -5,7 +5,7 @@ const ButtonsPanel = (props) => {
     <div className="buttonsPanel">
       <button onClick={()=>props.updateCounter('add')}>Add</button>
       <button onClick={()=>props.updateCounter('reset')}>Reset</button>
-      <button onClick={()=>props.updateCounter('yero')}>Set 0</button>
+      <button onClick={()=>props.updateCounter('zero')}>Set 0</button>
     </div>
   );
 };

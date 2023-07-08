@@ -11,11 +11,9 @@ const Counter = (props) => {
   const [stepValue, setStepValue] = useState(1);
 
   const stepChange = (action) => {
-    console.log('dzialam');
-  }
-
-
-
+    
+    console.log(action.target.value);
+  };
 
   const updateCounter = (action) => {
     if (action === "add") {
@@ -27,16 +25,22 @@ const Counter = (props) => {
     }
   };
 
-  useEffect(()=>{
-    console.log('Wywołanie use effecta');
+  useEffect(() => {
+    // console.log("Wywołanie use effecta");
   }, [counter]);
 
   return (
     <div className="counter">
       <Display counter={counter} />
       <ButtonsPanel updateCounter={updateCounter} />
-      {showClock ? <Clock setShowClock={setShowClock}/> : <p className="clockControll" onClick={()=>setShowClock(true)}>Pokaż zegar</p>}
-      <Step />
+      {showClock ? (
+        <Clock setShowClock={setShowClock} />
+      ) : (
+        <p className="clockControll" onClick={() => setShowClock(true)}>
+          Pokaż zegar
+        </p>
+      )}
+      <Step stepMethod={stepChange}/>
     </div>
   );
 };
