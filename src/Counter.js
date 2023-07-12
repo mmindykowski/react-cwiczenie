@@ -11,13 +11,13 @@ const Counter = (props) => {
   const [stepValue, setStepValue] = useState(1);
 
   const stepChange = (action) => {
-    
-    console.log(action.target.value);
+    setStepValue(action.target.value)
+    // console.log(setStepValue);
   };
 
   const updateCounter = (action) => {
     if (action === "add") {
-      setCounter(counter + 1);
+      setCounter(counter + parseFloat(stepValue));
     } else if (action === "reset") {
       setCounter(props.counterInitValue);
     } else {
@@ -27,7 +27,7 @@ const Counter = (props) => {
 
   useEffect(() => {
     // console.log("Wywołanie use effecta");
-  }, [counter]);
+  }, []);
 
   return (
     <div className="counter">
