@@ -32,7 +32,7 @@ const Counter = (props) => {
   return (
     <div className="counter">
       <Display counter={counter} />
-      <ButtonsPanel updateCounter={updateCounter} />
+      <ButtonsPanel stepValue={stepValue} updateCounter={updateCounter} />
       {showClock ? (
         <Clock setShowClock={setShowClock} />
       ) : (
